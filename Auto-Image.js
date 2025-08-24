@@ -1673,9 +1673,22 @@
         credentials: "include",
       })
       const data = await response.json()
-      state.language = data.language === "pt" ? "pt" : "en"
+      if (data.language === "pt") {
+        state.language = "pt";
+      } else if (data.language === "es") {
+        state.language = "es";
+      } else {
+        state.language = "en";
+      }
     } catch {
-      state.language = navigator.language.startsWith("pt") ? "pt" : "en"
+      const navLang = navigator.language;
+      if (navLang.startsWith("pt")) {
+        state.language = "pt";
+      } else if (navLang.startsWith("es")) {
+        state.language = "es";
+      } else {
+        state.language = "en";
+      }
     }
   }
 
