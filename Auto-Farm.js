@@ -435,6 +435,16 @@
         pixels: "Pixels",
         charges: "Charges",
         level: "Level"
+      },
+      es: {
+        title: "WPlace Auto-Farm",
+        start: "Iniciar",
+        stop: "Detener",
+        ready: "Listo para comenzar",
+        user: "Usuario",
+        pixels: "Píxeles",
+        charges: "Cargas",
+        level: "Nivel"
       }
     };
 
@@ -588,6 +598,12 @@
           pixels: "Pixels",
           charges: "Charges",
           level: "Level"
+        },
+        es: {
+          user: "Usuario",
+          pixels: "Píxeles",
+          charges: "Cargas",
+          level: "Nivel"
         }
       }[state.language] || {
         user: "User",
